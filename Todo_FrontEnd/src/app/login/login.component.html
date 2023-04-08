@@ -1,0 +1,30 @@
+
+<!-- Creating a login page 1st page btw -->
+
+
+
+ <!-- <h1 style="color: red
+;">{{error}}</h1> -->
+
+<h1 >Login</h1>
+
+<div class="container">
+<div  class="alert alert-danger" *ngIf='invalid'> {{error}}</div>
+<div  class="alert alert-success" *ngIf='valid'> {{error}}</div>
+
+
+<div>
+    
+    Username :  <input type="text" placeholder="username" name="name" >
+<br>
+<br>
+
+Password : <input type="password" placeholder="password" name="password" value="{{password}}">   
+<br>
+<br>
+<button style="margin-left: 20%;" type="submit" id="b1" (click)=login() class="btn btn-success" >login</button>
+
+</div>
+</div>
+
+

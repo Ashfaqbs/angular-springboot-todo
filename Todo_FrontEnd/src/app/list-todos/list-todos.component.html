@@ -1,0 +1,64 @@
+<!-- Single Object{{dummy.id}}
+{{dummy.name}}
+{{dummy.description }} -->
+
+<!-- below is the List of objects -->
+
+<div class="alert alert-success" *ngIf='message' >{{message}}</div>
+<table border="3px" class="table">
+
+    <thead>
+
+        <tr>
+            <th>ID</th>
+            <th>description</th>
+            <th>Target Date</th>
+            <th>is Completed?</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let todo of todos">
+
+            <td>{{todo.id}}</td>
+            <td>{{todo.desc}}</td>
+            <td>{{todo.targetDate | date | uppercase}}</td>
+            <td>{{todo.done}}</td>
+            <!-- Delete Logic 
+            
+            created 
+            
+            -->
+            <td><button (click)="updateTodo(todo.id)" class="btn btn-success">update</button></td>
+
+            <td><button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button></td>
+        </tr>
+
+
+
+
+
+
+
+    </tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+
+<div class="row">
+
+    <button (click)="addTodo()" class="btn btn-success">Add Todo</button>
+
+</div>

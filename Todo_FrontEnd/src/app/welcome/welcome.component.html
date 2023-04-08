@@ -1,0 +1,38 @@
+<div class="container">
+
+    <H1>welcome</H1>
+    <span>Manage your Todo's here <a routerLink="/todos">Todos</a></span>
+    <br>
+
+
+</div>
+
+<div class="container">
+
+
+    click here to get hello world from springboot <button class="btn-primary" (click)="getWelcomeMessage()">Rest api
+        button 1</button>
+
+    <div *ngIf="error" style="border:2px solid black;background-color: red
+; border-radius: 5px; width:45%;">
+        Opps Some error has occured while calling the API
+
+    </div>
+    <main>
+        <h2> {{apiresponse1}} </h2>
+
+
+    </main>
+</div>
+
+<div class="container">
+
+
+    click here to get Caller from springboot <button class="btn-primary" (click)="getCallername()">Rest api button
+        2</button>
+
+    <main>
+        <h2 *ngIf="apiresponse2"> The caller is {{apiresponse2}} </h2>
+
+    </main>
+</div>

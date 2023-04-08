@@ -1,0 +1,31 @@
+
+
+
+<header>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark"> 
+<div>
+    <h1>Todo app</h1>
+    <small style="font-size: 50%;"> <a href="https://angular.io/" style="float: left;">Todos using Angular</a></small>
+
+</div>
+<ul class="navbar-nav" >
+    <!-- href and routerLink can be added in a tag better to use routerLink as if we click the page wont reload -->
+    <!-- <li><a href="/welcome"  class="navbar-link">Home</a></li> -->
+    <!-- <li><a *ngIf="isUser" routerLink="/welcome"  class="nav-link">Home</a></li> -->
+    <li><a *ngIf="hardcodedAuthService.isUseravailable()" routerLink="/welcome"  class="nav-link">Home</a></li>
+
+    <!-- //if isUser is true i.e that is user has logged in and that ref is not null , and this anchor <a> tags if he is logged wills show just  -->
+        <!-- welcome ,  logout and Todos -->
+    <!-- <li><a  *ngIf="isUser" routerLink="/todos"  class="nav-link">Todos</a></li> -->
+    <li><a  *ngIf="hardcodedAuthService.isUseravailable()" routerLink="/todos"  class="nav-link">Todos</a></li>
+</ul>
+<ul class="navbar-nav navbar-collapse justify-content-end ">
+    <!-- for this !isUseravail means user logged in true , !true means false , so when he logins , this tag <a> </a> will not been seen , as he has logged in so showing loggin again is wasteisUseravail -->
+    <!-- <li><a  *ngIf="!isUser" routerLink="/login"  class="nav-link">Login</a></li> -->
+    <li><a  *ngIf="!hardcodedAuthService.isUseravailable()" routerLink="/login"  class="nav-link">Login</a></li>
+    <!-- <li><a *ngIf="isUser"  href="/logout    "  class="nav-link">logout</a></li> -->
+    <li><a *ngIf="hardcodedAuthService.isUseravailable()"  routerLink="/logout"  class="nav-link">logout</a></li>
+</ul>
+    </nav>
+</header>
